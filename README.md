@@ -9,12 +9,12 @@ Look into tests (they are not really tests :D).
 
 ## Currently implemented
 
-[*] Distance Matrix API
-[ ] Directions API
-[ ] Elevation API
-[ ] Geocoding API
-[ ] Time Zones API
-[ ] OAuth
+- [x] Distance Matrix API
+- [ ] Directions API
+- [ ] Elevation API
+- [ ] Geocoding API
+- [ ] Time Zones API
+- [ ] OAuth
 
 ## Why making a new one ?
 
