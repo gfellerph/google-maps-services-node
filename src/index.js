@@ -5,6 +5,7 @@ var _ = require("lodash"),
     extend = _.extend,
     defaults = _.defaults,
     request = require("request"),
+    GoogleMapsApiError = require("./google-maps-error"),
     Q = require("q");
 
 var defaultConfig = {
@@ -45,7 +46,7 @@ module.exports = function(config) {
                     if (err)
                         reject(err);
                     if (response.status!=="OK")
-                        reject(response.status);
+                        reject(new GoogleMapsApiError(response));
                     resolve(response);
                 });
 
