@@ -44,8 +44,9 @@ module.exports = function(config) {
                 }, function(err, httpIM, response) {
                     if (err)
                         reject(err);
-                    else
-                        resolve(response);
+                    if (response.status!=="OK")
+                        reject(response.status);
+                    resolve(response);
                 });
 
             }).nodeify(cb);
